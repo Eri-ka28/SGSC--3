@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine’s Day</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6eb;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #d6336c;
+    }
+
+    button {
+      background: #d6336c;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #b82a5b;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💖 Happy Valentine’s Day 💖</h1>
+    <p>To our amazing employees — thank you for your hard work and dedication!</p>
+
+    <button onclick="showMessage()">Click for Appreciation 💌</button>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const messages = [
+      "You are truly appreciated for everything you do 🌟",
+      "Your hard work makes a difference every day 💼❤️",
+      "Thank you for being an amazing part of the team 🙌",
+      "We are grateful to have you with us 💖",
+      "Your dedication inspires everyone around you ✨"
+    ];
+
+    function showMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
